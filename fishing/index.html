@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TAWEENA — Fishing Tackles | مدينة نصر · التجمع · ٦ أكتوبر</title>
+<meta name="description" content="Taweena Fishing Tackles — Egypt's fishing tackle chain since 2011. Rods, jigs, lures, reels and coolers. Nasr City · El Tagamoa · 6th of October.">
+<style>
+:root{--blue:#0e8fe0;--cobalt:#0a6fd6;--deep:#073b8f;--navy:#041e4d;--cyan:#19b5e0;--ink:#12293f;--paper:#f4f6f8;--gray:#e8edf1}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:auto}
+body{font-family:"Helvetica Neue",Arial,"Noto Sans Arabic",sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+.ar{letter-spacing:0!important}
+.hollow{color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.3px currentColor}
+.mono{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;letter-spacing:.14em}
+
+/* ---------- 1 · global header ---------- */
+header{position:fixed;z-index:50;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:16px 6vw;font-size:11px;letter-spacing:.22em;color:#fff;text-shadow:0 1px 10px rgba(3,20,50,.45);transition:color .3s, text-shadow .3s}
+header:before{content:"";position:absolute;left:0;right:0;top:0;height:70px;background:linear-gradient(rgba(4,20,45,.28),transparent);z-index:-1;pointer-events:none}
+header.light{color:var(--ink);text-shadow:none}
+header.light:before{background:none}
+header b{font-weight:400;letter-spacing:.34em;font-size:13px}
+header nav{display:flex;gap:26px}
+header nav a{color:inherit;text-decoration:none;opacity:.85}
+header nav a:hover{opacity:1}
+header .cta{border:1px solid currentColor;padding:8px 14px;border-radius:4px;text-decoration:none;color:inherit}
+@media(max-width:700px){header nav{display:none}}
+
+/* ---------- generic section scaffolding ---------- */
+section{position:relative}
+.c{position:relative;z-index:2;padding:0 6vw}
+.kick{font-size:10px;letter-spacing:.3em;color:var(--cobalt)}
+.display{font-weight:200;text-transform:uppercase;line-height:1.02;letter-spacing:.03em}
+.btn{display:inline-block;background:var(--cobalt);color:#fff;font-size:10px;letter-spacing:.2em;padding:13px 22px;border-radius:4px;text-decoration:none;box-shadow:0 4px 14px rgba(10,111,214,.28)}
+.small{font-size:12px;line-height:1.65;color:#4a6585;max-width:300px}
+
+/* ---------- 2 · hero scroll canvas ---------- */
+.hero-scroll{height:320vh;background:#041e4d}
+.hero-pin{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden;background:radial-gradient(110% 90% at 50% 0%,#1fb6ef 0%,#0a6fd6 55%,#041e4d 100%)}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%}
+#heroVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+.hero-ui{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;text-align:center}
+.hero-ui h1{font-weight:200;font-size:min(12.5vw,160px);letter-spacing:.07em;text-indent:.07em;line-height:1;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px #fff;text-shadow:0 2px 24px rgba(0,35,90,.22)}
+.hero-ui p{margin-top:16px;color:rgba(242,250,255,.95);font-size:11px;letter-spacing:.3em;text-shadow:0 1px 12px rgba(0,35,85,.6)}
+.hero-ui .sub{margin-top:8px;font-size:12px;letter-spacing:.06em;color:rgba(230,246,255,.85)}
+.hint{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:#fff;font-size:10px;letter-spacing:.32em;z-index:4;animation:b 2s infinite}
+@keyframes b{50%{transform:translateY(6px)}}
+.hero-prog{position:absolute;top:0;left:0;height:3px;background:#7ce7ff;z-index:5;width:0}
+
+/* ---------- 3 · product intro & joint reveal ---------- */
+.intro{background:var(--paper);padding:14vh 0 10vh;overflow:hidden}
+.intro .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:6vw;align-items:start}
+.intro h2{font-size:clamp(30px,6.4vw,64px)}
+.intro .btn{margin-top:28px}
+.rod-stage{margin-top:9vh;height:120px;position:relative}
+.rod{position:absolute;top:50%;left:4vw;right:4vw;height:10px;transform:translateY(-50%);display:flex;align-items:center}
+.rod .seg{height:10px;border-radius:5px;background:linear-gradient(180deg,#2b3a4a,#0d1622 60%,#24344a);position:relative}
+.rod .seg:before{content:"";position:absolute;inset:2px 8px auto 8px;height:2px;background:repeating-linear-gradient(45deg,rgba(255,255,255,.16) 0 4px,transparent 4px 8px);border-radius:2px}
+.rod .seg.left{flex:1}
+.rod .seg.right{flex:1}
+.rod .ferrule{width:26px;height:16px;margin:0 var(--gap,2px);background:linear-gradient(180deg,#d7dee6,#8fa1b3 55%,#c7d2dd);border-radius:3px;flex:none;box-shadow:0 1px 4px rgba(10,30,60,.25)}
+.rod .guide{position:absolute;top:-13px;width:14px;height:14px;border:2px solid #33475e;border-radius:50%;background:transparent}
+.rod-lab{display:flex;justify-content:space-between;padding:0 4vw;margin-top:6px;font-size:9px;color:#7d93ab}
+@media(max-width:700px){.intro .grid{grid-template-columns:1fr}}
+
+/* ---------- 4 · detail gallery ---------- */
+.gallery{background:var(--paper);padding:6vh 0 14vh}
+.gallery .head{display:flex;justify-content:space-between;align-items:end;margin-bottom:6vh}
+.gallery h2{font-size:clamp(30px,6vw,58px)}
+.ggrid{display:grid;grid-template-columns:7fr 5fr;gap:22px}
+.gcard{position:relative;border-radius:6px;overflow:hidden;background:var(--gray)}
+.gcard img{width:100%;height:100%;object-fit:cover;display:block}
+.gcard figcaption{position:absolute;left:0;right:0;bottom:0;padding:38px 18px 14px;background:linear-gradient(transparent,rgba(4,25,55,.72));color:#eaf6ff}
+.gcard figcaption b{display:block;font-weight:400;letter-spacing:.22em;font-size:11px}
+.gcard figcaption span{font-size:11px;opacity:.85;line-height:1.5;display:block;margin-top:4px;max-width:340px}
+.gcard.tall{grid-row:span 2;min-height:520px}
+.gcard.wide{min-height:249px}
+@media(max-width:700px){.ggrid{grid-template-columns:1fr}.gcard.tall{min-height:380px}}
+
+/* ---------- 5 · depth-zone explorer ---------- */
+.depth-scroll{height:340vh;background:#041e4d}
+.depth-pin{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden;background:linear-gradient(180deg,#48d6f4 0%,#1493e0 34%,#0a4ca8 68%,#041e4d 100%)}
+.depth-pin .rays{position:absolute;inset:-20% -30%;pointer-events:none;mix-blend-mode:screen;opacity:.3;background:repeating-linear-gradient(105deg,transparent 0 60px,rgba(255,255,255,.2) 90px,transparent 150px);-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 70%);mask-image:linear-gradient(180deg,#000 0%,transparent 70%)}
+.jig{position:absolute;left:50%;top:16%;width:26px;margin-left:-13px;z-index:2;filter:drop-shadow(0 6px 14px rgba(0,20,60,.45))}
+.jigline{position:absolute;left:50%;top:0;width:1px;height:16%;background:rgba(255,255,255,.55);z-index:1}
+.dstage{position:absolute;left:6vw;top:50%;transform:translateY(-50%);color:#fff;max-width:400px;opacity:0;z-index:3}
+.dstage .no{font-size:10px;letter-spacing:.3em;opacity:.85}
+.dstage h3{font-weight:200;font-size:clamp(30px,7vw,60px);letter-spacing:.05em;line-height:1;margin-top:8px;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.3px #fff}
+.dstage p{margin-top:12px;font-size:12px;line-height:1.65;opacity:.94;max-width:300px}
+.dstage em{display:block;font-style:normal;margin-top:10px;font-size:10px;letter-spacing:.18em;color:#cfeeff;line-height:1.7}
+.dmeter{position:absolute;right:6vw;top:50%;transform:translateY(-50%);color:#dff4ff;font-size:10px;text-align:right;z-index:3;line-height:2.1}
+@media(max-width:700px){.dmeter{display:none}}
+
+/* ---------- 6 · product collection grid ---------- */
+.collection{background:var(--paper);padding:14vh 0}
+.collection h2{font-size:clamp(30px,6vw,58px);margin-bottom:2vh}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:5vh}
+.pcard{background:#eef2f5;border-radius:6px;padding:26px 22px;min-height:170px;display:flex;flex-direction:column;gap:8px}
+.pcard .tag{font-size:9px;letter-spacing:.26em;color:var(--cobalt)}
+.pcard h3{font-weight:400;font-size:17px;line-height:1.3}
+.pcard p{font-size:11.5px;line-height:1.6;color:#4a6585;flex:1}
+.pcard .row{display:flex;justify-content:space-between;align-items:center}
+.pcard .price{font-size:12px;font-weight:700;color:var(--deep)}
+.pcard .ask{font-size:10px;letter-spacing:.14em;color:var(--cobalt);text-decoration:none;border-bottom:1px solid rgba(10,111,214,.4);padding-bottom:2px}
+.srcnote{margin-top:4vh;font-size:10.5px;color:#7d93ab;line-height:1.6;max-width:640px}
+@media(max-width:900px){.pgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pgrid{grid-template-columns:1fr}}
+
+/* ---------- 7 · craftsmanship banner ---------- */
+.craft{background:var(--cobalt);color:#fff;overflow:hidden}
+.craft .ph{height:52vh;background:url('../assets/photo/rod_bent.jpg') center 30%/cover no-repeat}
+.craft .band{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:7vh 6vw}
+.craft h2{font-weight:200;font-size:clamp(26px,6vw,66px);line-height:1;text-transform:uppercase;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.4px #fff;flex:1}
+.craft .small{color:#eaf6ff;max-width:280px}
+.craft .btn{background:#fff;color:var(--cobalt);box-shadow:none;margin-top:14px}
+
+/* ---------- 8 · FAQ ---------- */
+.faq{background:var(--paper);padding:14vh 0}
+.faq .grid{display:grid;grid-template-columns:1fr 1.4fr;gap:6vw}
+.faq h2{font-size:clamp(28px,6vw,56px)}
+.fitem{border-top:1px solid #c4d2df}
+.fitem:last-child{border-bottom:1px solid #c4d2df}
+.fitem button{width:100%;background:none;border:0;padding:20px 0;display:flex;justify-content:space-between;align-items:center;font:inherit;font-size:14px;color:var(--ink);cursor:pointer;text-align:left;gap:14px}
+.fitem .ans{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.fitem .ans p{font-size:12.5px;line-height:1.7;color:#4a6585;padding:0 0 20px;max-width:520px}
+.fitem .plus{font-size:18px;color:var(--cobalt);transition:transform .3s}
+.fitem.open .plus{transform:rotate(45deg)}
+@media(max-width:700px){.faq .grid{grid-template-columns:1fr}}
+
+/* ---------- 9 · consultation & footer ---------- */
+.ask{background:var(--paper);padding:14vh 0 0;border-top:1px solid var(--gray)}
+.ask .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw}
+.ask h2{font-size:clamp(30px,7vw,72px)}
+.ask .sub{margin-top:18px}
+.ask form{display:grid;gap:14px;align-content:start}
+.ask input,.ask textarea,.ask select{border:0;border-bottom:1px solid #9bb0c8;background:none;padding:10px 0;font:inherit;font-size:12px;color:var(--ink);width:100%}
+.ask button{background:var(--cobalt);color:#fff;border:0;border-radius:4px;padding:13px;letter-spacing:.18em;font-size:10px;cursor:pointer}
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:9vh 0 6vh}
+.branch{border-top:2px solid var(--cobalt);padding-top:12px}
+.branch b{display:block;font-weight:400;letter-spacing:.18em;font-size:11px}
+.branch p{font-size:11.5px;color:#4a6585;line-height:1.6;margin-top:6px}
+.branch a{color:var(--cobalt);text-decoration:none}
+.foot{font-weight:200;font-size:min(13.5vw,215px);letter-spacing:.06em;line-height:.95;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.2px var(--ink);white-space:nowrap;overflow:hidden}
+.legal{display:flex;justify-content:space-between;gap:14px;padding:18px 0 26px;font-size:10px;color:#7d93ab;letter-spacing:.08em;flex-wrap:wrap}
+.legal a{color:#7d93ab}
+@media(max-width:700px){.ask .grid{grid-template-columns:1fr}.branches{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.hint{animation:none}}
+</style></head><body>
+
+<!-- 1 · header -->
+<header id="hdr"><b>TAWEENA</b>
+<nav><a href="#gear">GEAR</a><a href="#depths">DEPTHS</a><a href="#collection">COLLECTION</a><a href="#branches">BRANCHES</a></nav>
+<a class="cta" href="https://www.facebook.com/Taweenafishing" target="_blank" rel="noopener">FACEBOOK ↗</a></header>
+
+<!-- 2 · hero scroll canvas -->
+<div class="hero-scroll" id="heroScroll"><div class="hero-pin">
+<div class="hero-prog" id="heroProg"></div>
+<canvas id="heroCanvas" width="1280" height="720"></canvas>
+<video id="heroVideo" src="../assets/video/hero_scrub.mp4" muted playsinline preload="auto"></video>
+<div class="hero-ui" id="heroUi"><h1>TAWEENA</h1><p>FISHING TACKLES</p><div class="sub ar">سلسلة محلات توينه لأدوات صيد الأسماك — منذ ٢٠١١</div></div>
+<div class="hint">SCROLL — <span class="ar">مرّر</span></div>
+</div></div>
+
+<!-- 3 · product intro & joint reveal -->
+<section class="intro" id="gear"><div class="c">
+<div class="grid"><div>
+<div class="kick">THE TAWEENA BLANK</div>
+<h2 class="display hollow" style="color:var(--ink)">Precision<br>where it<br>matters</h2>
+<a class="btn" href="#collection">SEE THE GEAR</a></div>
+<p class="small" style="align-self:end">A carbon blank with the TAWEENA name printed along its length — the rod you see bent over the bow in the film above is the rod we sell in store. Two-piece construction, a machined ferrule, and guides wrapped to hold their line under a running tuna.<br><br><span class="mono" style="font-size:10px">CARBON BLANK · TWO-PIECE · SPINNING</span></p></div>
+<div class="rod-stage" aria-hidden="true"><div class="rod" id="rod">
+<div class="seg left"><i class="guide" style="left:12%"></i><i class="guide" style="left:38%"></i><i class="guide" style="left:64%"></i></div>
+<div class="ferrule"></div>
+<div class="seg right"><i class="guide" style="left:22%"></i><i class="guide" style="left:55%"></i><i class="guide" style="left:84%"></i></div>
+</div><div class="rod-lab mono"><span>BUTT SECTION</span><span id="rodState">FERRULE — SEATED</span><span>TIP SECTION</span></div></div>
+</div></section>
+
+<!-- 4 · detail gallery -->
+<section class="gallery"><div class="c">
+<div class="head"><div><div class="kick">DETAIL GALLERY</div><h2 class="display hollow" style="color:var(--ink)">Up close</h2></div><p class="small">Every frame below is a still from Taweena's own hero film — no stock, no renders.</p></div>
+<div class="ggrid">
+<figure class="gcard tall"><img src="../assets/photo/rod_macro.jpg" alt="TAWEENA lettering on a carbon fishing rod blank"><figcaption><b>THE BLANK</b><span>TAWEENA FISHING TACKLES, printed on woven carbon. The name is the spec sheet: if it carries the name, it carries the warranty conversation in store.</span></figcaption></figure>
+<figure class="gcard wide"><img src="../assets/photo/rod_bent.jpg" alt="Angler fighting a fish, rod bent deep"><figcaption><b>UNDER LOAD</b><span>The same blank, bent to the butt by a running fish. Power lives in the lower third.</span></figcaption></figure>
+<figure class="gcard wide"><img src="../assets/photo/angler.jpg" alt="Angler reeling from the bow of a boat"><figcaption><b>ON THE WATER</b><span>Bow position, bent rod, open sea — the test bench no workshop can fake.</span></figcaption></figure>
+</div></div></section>
+
+<!-- 5 · depth-zone explorer -->
+<div class="depth-scroll" id="depths"><div class="depth-pin" id="depthPin">
+<div class="rays"></div><div class="jigline"></div>
+<svg class="jig" id="jig" viewBox="0 0 26 90" aria-hidden="true"><path d="M13 0 L19 22 L22 55 L13 90 L4 55 L7 22 Z" fill="#c8d6e2" stroke="#5f7a94"/><path d="M13 0 L19 22 L22 55 L13 90 Z" fill="#e9f3fa"/><circle cx="13" cy="30" r="3.4" fill="#0a6fd6"/><path d="M4 62 q-8 10 -2 20 M22 62 q8 10 2 20" stroke="#dfeaf2" fill="none" stroke-width="2"/></svg>
+<div class="dstage" data-stage="0"><div class="no">01 — 0–10 M</div><h3>SURFACE</h3><p>Where the light still arrives. Poppers, stickbaits and shallow minnows worked fast over feeding fish.</p><em>TAWEENA MONSTER LURES — MINNOW · SINKING · 60MM · 6.5G</em></div>
+<div class="dstage" data-stage="1"><div class="no">02 — 10–40 M</div><h3>MID WATER</h3><p>Suspending jigs that hold their line in the current column, flashing on the fall, swimming on the lift.</p><em>JIGGING PRO FLASH JIGS 14/25G · SARDINE SLIDER 20/40G · BKK HOOKS</em></div>
+<div class="dstage" data-stage="2"><div class="no">03 — 40 M+</div><h3>THE DEEPER WATER</h3><p>Heavier metal for the places big fish wait — drop fast, stay vertical, work the bottom third.</p><em>JIGGING PRO STRICKER JIG 40/80G · ZENTO TROLLING SPOONS · MADE IN EGYPT</em></div>
+<div class="dmeter mono"><span id="dNow">DEPTH 0 M</span><br>SURFACE ———<br>MID WATER ———<br>THE DEEP ———</div>
+</div></div>
+
+<!-- 6 · product collection -->
+<section class="collection" id="collection"><div class="c">
+<div class="kick">FROM THE PAGE — NOV 2026</div>
+<h2 class="display hollow" style="color:var(--ink)">The collection</h2>
+<p class="small" style="max-width:420px">Real stock posted by Taweena fishing tackles on Facebook. Prices appear only where the page itself stated them — for everything else, one tap asks on WhatsApp.</p>
+<div class="pgrid" id="pgrid"></div>
+<p class="srcnote" id="srcnote"></p>
+</div></section>
+
+<!-- 7 · craftsmanship banner -->
+<section class="craft"><div class="ph"></div><div class="band">
+<h2>Handmade<br>where it counts.</h2>
+<div><p class="small">MAKADI rigs are tied by hand: steel wire for sharp-toothed predators, sharp hooks, rigged for live or dead bait. The slow work is done at the bench so the fast work holds at sea.</p><a class="btn" href="https://www.facebook.com/photo.php?fbid=1590246743143870&set=pb.100064756774198.-2207520000&type=3" target="_blank" rel="noopener">SEE THE MAKADI POST ↗</a></div>
+</div></section>
+
+<!-- 8 · FAQ -->
+<section class="faq"><div class="c"><div class="grid">
+<div><div class="kick">FAQ</div><h2 class="display hollow" style="color:var(--ink)">Before you<br>head out</h2></div>
+<div id="faqList">
+<div class="fitem"><button>Where are your branches?<span class="plus">+</span></button><div class="ans"><p>Nasr City (6 Nagati Serag, behind El Serag Mall), El Tagamoa in New Cairo, and 6th of October (El Israa Plaza Mall, Central Axis). Full details and phone numbers are in the branches section below.</p></div></div>
+<div class="fitem"><button>Why don't all products show a price?<span class="plus">+</span></button><div class="ans"><p>Because the page itself doesn't post one for most items — we only show prices Taweena has publicly stated (like the EGP 120 kids kit). Tap “ASK” on any product and WhatsApp opens with the question ready to send.</p></div></div>
+<div class="fitem"><button>Do you ship outside Cairo?<span class="plus">+</span></button><div class="ans"><p>Customers ask this on the page all the time — from Suez to Alexandria. The fastest answer is on WhatsApp (0122 734 7737) with your city and the item you want.</p></div></div>
+<div class="fitem"><button>What should I buy for jigging?<span class="plus">+</span></button><div class="ans"><p>Start with the depth zones above: Flash Jigs 14/25g for mid water, the Sardine Slider 20/40g as an all-rounder, and the Stricker 40/80g when the marks sit deep. All Jigging Pro jigs in store come fitted with BKK hooks.</p></div></div>
+<div class="fitem"><button>Do you stock live bait?<span class="plus">+</span></button><div class="ans"><p>Live shrimp and live-bait buckets come back in stock regularly — the page announces restocks. Message ahead on WhatsApp before you travel to a branch.</p></div></div>
+</div></div></div></section>
+
+<!-- 9 · consultation & footer -->
+<section class="ask" id="branches"><div class="c">
+<div class="grid"><div><div class="kick">CONSULTATION</div><h2 class="display hollow" style="color:var(--ink)">Ask us<br>about<br>your water</h2><p class="sub small">Tell us what you chase and where — the form opens WhatsApp with your message ready, straight to the shop.</p></div>
+<form id="askForm"><input id="fName" placeholder="Your name" autocomplete="name"><select id="fWater"><option value="">Where do you fish?</option><option>Red Sea</option><option>Mediterranean</option><option>Nile / lakes</option><option>Not sure yet</option></select><textarea id="fMsg" rows="3" placeholder="What are you chasing? (tuna, squid, jigging…)"></textarea><button type="submit">SEND VIA WHATSAPP ↗</button></form></div>
+<div class="branches" id="branchGrid"></div>
+<div class="foot">TAWEENA</div>
+<div class="legal"><span>© TAWEENA FISHING TACKLES — SINCE 2011</span><span><a href="https://www.facebook.com/Taweenafishing" target="_blank" rel="noopener">FACEBOOK</a> · <a href="mailto:info@taweena.com">INFO@TAWEENA.COM</a> · 0122 734 7737</span><span>INDEPENDENT CONCEPT SITE — DATA FROM THE PUBLIC FACEBOOK PAGE, 26 NOV 2026</span></div>
+</div></section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+</body></html>
