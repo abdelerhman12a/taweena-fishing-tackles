@@ -50,6 +50,28 @@ All products, specs, branches and phones come from the public Facebook page
 **only** where the page itself stated them (Kids Kit EGP 120; KEEP COLD 40L
 EGP 2,625 in a page comment reply). Everything else says "PRICE ON WHATSAPP".
 
+## Marketplace + pipeline (automated)
+
+The collection is a working marketplace fed by an automated pipeline:
+
+```
+Facebook page ──scrape──▶ data/source_products.csv ──pipeline/sync_products.py──▶ data/products.json ──▶ shop grid + cart
+```
+
+- Products/prices live in `data/source_products.csv` (one row per SKU). Prices enter
+  **only** where Taweena published them, with `price_source` required by the validator —
+  currently 3 priced items (Kids Kit EGP 120, KEEP COLD 40L EGP 2,625, 60L EGP 4,190),
+  the rest are price-on-request via WhatsApp.
+- `python3 pipeline/sync_products.py` validates and regenerates `data/products.json`;
+  `.github/workflows/sync-products.yml` does it automatically on push.
+- Priced items are `checkout_ready` and go into the cart (`fishing/cart.js`).
+  Checkout (`fishing/checkout.js`) is a provider-adapter layer: today
+  `payment.provider` is `null`, so orders fall back to an itemised WhatsApp message.
+  When Taweena adds a digital payment method (Paymob / Stripe / Fawry adapters are
+  stubbed), set the provider in the pipeline config, implement the one server
+  endpoint, and every priced product can be charged with **no catalog changes**.
+  Full notes: `pipeline/README.md`.
+
 ## Run it
 
 Any static server, e.g. `python3 -m http.server` in the repo root, then open

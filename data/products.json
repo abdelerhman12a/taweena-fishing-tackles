@@ -1,1 +1,192 @@
-{"branches":[{"detail":"6 Nagati Serag, behind El Serag Mall, Cairo 11717","name":"Nasr City","phone":"01226575854"},{"detail":"Branch listed by the page — details on WhatsApp","name":"El Tagamoa (New Cairo)","phone":"01227347737"},{"detail":"El Israa Plaza Mall, Central Axis","name":"6th of October","phone":"01283620001"}],"page":"https://www.facebook.com/Taweenafishing","products":[{"name":"MAKADI Hand-Made Rigs","price":null,"spec":"Steel-wire rigs for sharp-toothed / predatory fish · sharp hooks · for live or dead bait · sea fishing","tag":"HANDMADE"},{"name":"Jigging Pro Sardine Slider","price":null,"spec":"20g / 40g · fitted with BKK hooks","tag":"JIGGING"},{"name":"Jigging Pro Flash Jigs","price":null,"spec":"14g / 25g · fitted with BKK hooks","tag":"JIGGING"},{"name":"Jigging Pro Stricker Jig","price":null,"spec":"40g / 80g · fitted with BKK hooks","tag":"JIGGING"},{"name":"TAWEENA Monster Lures","price":null,"spec":"Minnow · sinking · 60mm · 6.5g · premium quality","tag":"LURES"},{"name":"ZENTO Trolling Spoons","price":null,"spec":"Made in Egypt · feather tail · multiple colours","tag":"LURES"},{"name":"Squid Jigs — Holiday Fishing Egi","price":null,"spec":"Colourful egi packs for squid","tag":"EGI"},{"name":"RYOBI Edge HSX Spinning Reel","price":null,"spec":"RANMI by RYOBI · gear ratio 6.2:1 · sizes 1000–5000 HSX · Air Rotor","tag":"REELS"},{"name":"Kids Fishing Kit","price":"EGP 120","spec":"Complete kit: 4m lightweight collapsible hand rod · line · sinker · hooks · float · glow phosphorus for night fishing","tag":"KITS"},{"name":"UV Flashlights — 3 Models","price":null,"spec":"Model 1 / Model 2 / K31 · scorpion detection · fast glow charging for glow lures · zoom · USB charging","tag":"LIGHT"},{"name":"Rod Cases & Gear Bags","price":null,"spec":"Two sizes: 120cm and 100cm · protects gear from scratches and knocks","tag":"STORAGE"},{"name":"KEEP COLD Cooler Boxes","price":"from EGP 2,625 (40L, page reply)","spec":"10 / 18 / 30 / 40 / 60 / 70 litre · 40L comes with 2 water coolers free","tag":"COOLERS"}],"source":"Taweena fishing tackles — Facebook page scrape, 26 Nov 2026 (public posts/reels). Prices are shown ONLY where the page itself stated them; everything else is 'ask on WhatsApp'.","whatsapp":"201227347737"}
+{
+  "schema": 2,
+  "generated_from": "data/source_products.csv by pipeline/sync_products.py — do not edit by hand",
+  "source": "Taweena fishing tackles — Facebook page scrape, 26 Nov 2026 (public posts/reels + page replies in comments). Prices appear ONLY where the page itself published them.",
+  "store": {
+    "name": "Taweena Fishing Tackles",
+    "page": "https://www.facebook.com/Taweenafishing",
+    "whatsapp": "201227347737",
+    "email": "info@taweena.com",
+    "branches": [
+      {
+        "name": "Nasr City",
+        "detail": "6 Nagati Serag, behind El Serag Mall, Cairo 11717",
+        "phone": "01226575854"
+      },
+      {
+        "name": "El Tagamoa (New Cairo)",
+        "detail": "Branch listed by the page — details on WhatsApp",
+        "phone": "01227347737"
+      },
+      {
+        "name": "6th of October",
+        "detail": "El Israa Plaza Mall, Central Axis",
+        "phone": "01283620001"
+      }
+    ]
+  },
+  "payment": {
+    "provider": null,
+    "currency": "EGP",
+    "checkout_enabled": false,
+    "note": "No digital payment method yet. Checkout falls back to a WhatsApp order. Priced products are checkout_ready and need no data changes when a provider is added."
+  },
+  "products": [
+    {
+      "sku": "TW-KIT-KIDS",
+      "name": "Kids Fishing Kit",
+      "category": "KITS",
+      "spec": "Complete kit: 4m lightweight collapsible hand rod, line, sinker, hooks, float, glow phosphorus for night fishing",
+      "price_egp": 120,
+      "price_display": "EGP 120",
+      "price_source": "Caption on the page post",
+      "fb_url": "https://www.facebook.com/photo.php?fbid=1588493066652571&set=pb.100064756774198.-2207520000&type=3",
+      "in_stock": true,
+      "checkout_ready": true
+    },
+    {
+      "sku": "TW-COOL-40",
+      "name": "KEEP COLD Cooler Box 40L",
+      "category": "COOLERS",
+      "spec": "40 litre, Emirati manufacture with American expertise, comes with 2 water coolers free",
+      "price_egp": 2625,
+      "price_display": "EGP 2,625",
+      "price_source": "Page reply in post comments",
+      "fb_url": "https://www.facebook.com/Taweenafishing/posts/pfbid02S1RUe5jJbDbxKAxoantd3UtsXC6prJU8Xj3usV6tpJaS46u1PoPTHRJjR5hAVnFvl",
+      "in_stock": true,
+      "checkout_ready": true
+    },
+    {
+      "sku": "TW-COOL-60W",
+      "name": "KEEP COLD Cooler Box 60L (wheels)",
+      "category": "COOLERS",
+      "spec": "60 litre with wheels, Emirati manufacture with American expertise",
+      "price_egp": 4190,
+      "price_display": "EGP 4,190",
+      "price_source": "Page reply in post comments",
+      "fb_url": "https://www.facebook.com/Taweenafishing/posts/pfbid02S1RUe5jJbDbxKAxoantd3UtsXC6prJU8Xj3usV6tpJaS46u1PoPTHRJjR5hAVnFvl",
+      "in_stock": true,
+      "checkout_ready": true
+    },
+    {
+      "sku": "TW-RIG-MAKADI",
+      "name": "MAKADI Hand-Made Rigs",
+      "category": "HANDMADE",
+      "spec": "Steel-wire rigs for sharp-toothed / predatory fish, sharp hooks, for live or dead bait, sea fishing",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/photo.php?fbid=1590246743143870&set=pb.100064756774198.-2207520000&type=3",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-JIG-SARDINE",
+      "name": "Jigging Pro Sardine Slider",
+      "category": "JIGGING",
+      "spec": "20g / 40g, fitted with BKK hooks",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": null,
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-JIG-FLASH",
+      "name": "Jigging Pro Flash Jigs",
+      "category": "JIGGING",
+      "spec": "14g / 25g, fitted with BKK hooks",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/reel/4640575616161446",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-JIG-STRICKER",
+      "name": "Jigging Pro Stricker Jig",
+      "category": "JIGGING",
+      "spec": "40g / 80g, fitted with BKK hooks",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/reel/28031322026499079",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-LURE-MONSTER",
+      "name": "TAWEENA Monster Lures",
+      "category": "LURES",
+      "spec": "Minnow, sinking, 60mm, 6.5g, premium quality",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/photo.php?fbid=1576940804474464&set=pb.100064756774198.-2207520000&type=3",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-SPOON-ZENTO",
+      "name": "ZENTO Trolling Spoons",
+      "category": "LURES",
+      "spec": "Made in Egypt, feather tail, multiple colours",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/photo.php?fbid=1572363288265549&set=pb.100064756774198.-2207520000&type=3",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-EGI-HOLIDAY",
+      "name": "Squid Jigs - Holiday Fishing Egi",
+      "category": "EGI",
+      "spec": "Colourful egi packs for squid",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/photo/?fbid=1587433796758498&set=pb.100064756774198.-2207520000",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-REEL-EDGEHSX",
+      "name": "RYOBI Edge HSX Spinning Reel",
+      "category": "REELS",
+      "spec": "RANMI by RYOBI, gear ratio 6.2:1, sizes 1000-5000 HSX, Air Rotor",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/reel/1236775495154731",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-UV-3MODELS",
+      "name": "UV Flashlights - 3 Models",
+      "category": "LIGHT",
+      "spec": "Model 1 / Model 2 / K31, scorpion detection, fast glow charging for glow lures, zoom, USB charging",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/photo/?fbid=1587441693424375&set=pb.100064756774198.-2207520000",
+      "in_stock": true,
+      "checkout_ready": false
+    },
+    {
+      "sku": "TW-CASE-ROD",
+      "name": "Rod Cases & Gear Bags",
+      "category": "STORAGE",
+      "spec": "Two sizes: 120cm and 100cm, protects gear from scratches and knocks",
+      "price_egp": null,
+      "price_display": null,
+      "price_source": null,
+      "fb_url": "https://www.facebook.com/photo.php?fbid=1585308320304379&set=pb.100064756774198.-2207520000&type=3",
+      "in_stock": true,
+      "checkout_ready": false
+    }
+  ]
+}

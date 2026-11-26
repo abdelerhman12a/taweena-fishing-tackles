@@ -142,13 +142,35 @@ section{position:relative}
 .legal{display:flex;justify-content:space-between;gap:14px;padding:18px 0 26px;font-size:10px;color:#7d93ab;letter-spacing:.08em;flex-wrap:wrap}
 .legal a{color:#7d93ab}
 @media(max-width:700px){.ask .grid{grid-template-columns:1fr}.branches{grid-template-columns:1fr}}
+/* ---------- marketplace cart ---------- */
+.pcard .addbtn{background:var(--cobalt);color:#fff;border:0;border-radius:4px;padding:9px 14px;font-size:10px;letter-spacing:.14em;cursor:pointer}
+.pcard .price.askp{color:#7d93ab;font-weight:400;font-size:10px;letter-spacing:.12em}
+.pcard .psrc{font-size:9.5px;color:#93a8bd;letter-spacing:.04em}
+#cartDrawer{position:fixed;top:0;right:0;bottom:0;width:min(380px,92vw);background:#fff;z-index:80;box-shadow:-12px 0 34px rgba(4,25,55,.25);transform:translateX(105%);transition:transform .35s ease;display:flex;flex-direction:column}
+#cartDrawer.open{transform:none}
+#cartDrawer .chead{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid var(--gray)}
+#cartDrawer .chead b{font-weight:400;letter-spacing:.24em;font-size:12px}
+#cartDrawer .chead button{background:none;border:0;font-size:20px;cursor:pointer;color:var(--ink)}
+#cartItems{flex:1;overflow:auto;padding:16px 22px;display:flex;flex-direction:column;gap:14px}
+.cart-empty{font-size:12px;color:#7d93ab;line-height:1.6}
+.cline{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--gray);padding-bottom:12px}
+.cline .cinfo{flex:1}.cline .cinfo b{display:block;font-weight:400;font-size:13px;line-height:1.35}
+.cline .cinfo span{font-size:11px;color:#7d93ab}
+.cline .cqty{display:flex;align-items:center;gap:8px}
+.cline .cqty button{width:24px;height:24px;border:1px solid #c4d2df;background:#fff;border-radius:4px;cursor:pointer}
+.cline .csum{font-size:12px;font-weight:700;min-width:74px;text-align:right}
+#cartDrawer .cfoot{padding:18px 22px;border-top:1px solid var(--gray)}
+#cartDrawer .ctotal{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px}
+#payNote{font-size:10.5px;color:#7d93ab;line-height:1.55;margin-bottom:12px}
+#checkoutBtn{width:100%;background:var(--cobalt);color:#fff;border:0;border-radius:4px;padding:14px;letter-spacing:.16em;font-size:11px;cursor:pointer}
 @media(prefers-reduced-motion:reduce){.hint{animation:none}}
 </style></head><body>
 
 <!-- 1 · header -->
 <header id="hdr"><b>TAWEENA</b>
-<nav><a href="#gear">GEAR</a><a href="#depths">DEPTHS</a><a href="#collection">COLLECTION</a><a href="#branches">BRANCHES</a></nav>
-<a class="cta" href="https://www.facebook.com/Taweenafishing" target="_blank" rel="noopener">FACEBOOK ↗</a></header>
+<nav><a href="#gear">GEAR</a><a href="#depths">DEPTHS</a><a href="#collection">MARKETPLACE</a><a href="#branches">BRANCHES</a></nav>
+<span style="display:flex;gap:10px;align-items:center"><button class="cta" data-cart-open style="background:none;font:inherit;color:inherit;cursor:pointer">CART <span class="cart-count" style="display:none;background:var(--cyan);color:#fff;border-radius:8px;padding:1px 7px;margin-left:4px">0</span></button>
+<a class="cta" href="https://www.facebook.com/Taweenafishing" target="_blank" rel="noopener">FACEBOOK ↗</a></span></header>
 
 <!-- 2 · hero scroll canvas -->
 <div class="hero-scroll" id="heroScroll"><div class="hero-pin">
@@ -194,9 +216,9 @@ section{position:relative}
 
 <!-- 6 · product collection -->
 <section class="collection" id="collection"><div class="c">
-<div class="kick">FROM THE PAGE — NOV 2026</div>
-<h2 class="display hollow" style="color:var(--ink)">The collection</h2>
-<p class="small" style="max-width:420px">Real stock posted by Taweena fishing tackles on Facebook. Prices appear only where the page itself stated them — for everything else, one tap asks on WhatsApp.</p>
+<div class="kick">FROM THE PAGE — NOV 2026 · AUTO-SYNCED CATALOG</div>
+<h2 class="display hollow" style="color:var(--ink)">The marketplace</h2>
+<p class="small" style="max-width:420px">Real stock posted by Taweena fishing tackles on Facebook, piped into the shop automatically. Priced items go in the cart; prices appear only where the page itself stated them — for everything else, one tap asks on WhatsApp.</p>
 <div class="pgrid" id="pgrid"></div>
 <p class="srcnote" id="srcnote"></p>
 </div></section>
@@ -227,8 +249,15 @@ section{position:relative}
 <div class="legal"><span>© TAWEENA FISHING TACKLES — SINCE 2011</span><span><a href="https://www.facebook.com/Taweenafishing" target="_blank" rel="noopener">FACEBOOK</a> · <a href="mailto:info@taweena.com">INFO@TAWEENA.COM</a> · 0122 734 7737</span><span>INDEPENDENT CONCEPT SITE — DATA FROM THE PUBLIC FACEBOOK PAGE, 26 NOV 2026</span></div>
 </div></section>
 
+<!-- cart drawer -->
+<aside id="cartDrawer" aria-label="Shopping cart"><div class="chead"><b>YOUR CART</b><button data-cart-close aria-label="Close cart">×</button></div>
+<div id="cartItems"></div>
+<div class="cfoot"><div class="ctotal"><span>TOTAL</span><b id="cartTotal">EGP 0</b></div><p id="payNote"></p><button id="checkoutBtn">CHECKOUT ↗</button></div></aside>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="checkout.js"></script>
+<script src="cart.js"></script>
 <script src="app.js"></script>
 </body></html>

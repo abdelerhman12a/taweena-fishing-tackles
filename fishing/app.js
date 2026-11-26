@@ -134,14 +134,19 @@
   /* ---------- products + branches (real page data) ---------- */
   function waLink(text) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text); }
   fetch("../data/products.json").then(function (r) { return r.json(); }).then(function (d) {
-    WA = d.whatsapp || WA;
+    var store = d.store || {};
+    WA = store.whatsapp || d.whatsapp || WA;
     document.getElementById("pgrid").innerHTML = d.products.map(function (p) {
-      return '<article class="pcard"><div class="tag">' + p.tag + '</div><h3>' + p.name + '</h3><p>' + p.spec + '</p>' +
-        '<div class="row"><span class="price">' + (p.price ? p.price : "PRICE ON WHATSAPP") + '</span>' +
-        '<a class="ask" target="_blank" rel="noopener" href="' + waLink("Hi Taweena — what is the price of: " + p.name + "?") + '">ASK ↗</a></div></article>';
+      var foot = p.checkout_ready
+        ? '<span class="price">' + p.price_display + '</span><button class="addbtn" data-add="' + p.sku + '">ADD TO CART</button>'
+        : '<span class="price askp">PRICE ON WHATSAPP</span><a class="ask" target="_blank" rel="noopener" href="' + waLink("Hi Taweena — what is the price of: " + p.name + " (" + p.sku + ")?") + '">ASK ↗</a>';
+      return '<article class="pcard"><div class="tag">' + p.category + ' · ' + p.sku + '</div><h3>' + p.name + '</h3><p>' + p.spec + '</p>' +
+        '<div class="row">' + foot + '</div>' +
+        (p.price_source ? '<div class="psrc">Price: ' + p.price_source + '</div>' : '') + '</article>';
     }).join("");
     document.getElementById("srcnote").textContent = "Source: " + d.source;
-    document.getElementById("branchGrid").innerHTML = d.branches.map(function (b) {
+    if (window.TaweenaCart) window.TaweenaCart.register(d.products, d.payment, WA);
+    document.getElementById("branchGrid").innerHTML = (store.branches || d.branches || []).map(function (b) {
       return '<div class="branch"><b>' + b.name.toUpperCase() + '</b><p>' + b.detail + '<br><a href="tel:+20' + b.phone.slice(1) + '">' +
         b.phone.replace(/(\d{4})(\d{4})(\d{3})/, "$1 $2 $3") + '</a> · <a target="_blank" rel="noopener" href="' +
         waLink("Hi Taweena " + b.name + " — I have a question about fishing tackle.") + '">WHATSAPP ↗</a></p></div>';
